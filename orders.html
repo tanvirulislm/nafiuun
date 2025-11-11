@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Orders | BookStore</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== Header Middle ===== -->
+    <div class="header-middle py-3 border-bottom">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="#"><img src="images/naafiun.webp" alt="BookStore Logo" class="logo-img" /></a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="header-search flex-grow-1 mx-4">
+          <form class="d-flex">
+            <input type="text" class="form-control search-box" placeholder="বইয়ের নাম ও লেখক দিয়ে অনুসন্ধান করুন" />
+            <button class="btn btn-deep-purple px-3"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+
+        <!-- Account Links -->
+        <div class="header-links text-end">
+          <a href="wishlist.html" class="text-dark text-decoration-none me-3 fw-semibold">উইশ লিস্ট</a>
+          <a href="#" class="btn btn-outline-deep-purple btn-sm fw-semibold">লগইন / রেজিস্টার</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Bottom Navigation ===== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+            <li class="nav-item"><a href="#" class="nav-link active">হোম</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">জেনারেল বই</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">একাডেমিক</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">আরবি বই</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">বিষয়</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">লেখক</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">প্রকাশক</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">বইমেলা ২০২৫</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">প্রি-অর্ডার</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">লাইফস্টাইল</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">স্টেশনারী</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== My Orders Section ===== -->
+    <section class="py-5 orders-page">
+      <div class="container">
+        <h3 class="fw-bold text-deep-purple mb-4"><i class="bi bi-box-seam me-2"></i> আমার অর্ডারসমূহ</h3>
+
+        <div class="bg-white shadow-sm rounded p-4">
+          <div class="table-responsive">
+            <table class="table align-middle mb-0">
+              <thead class="text-muted small border-bottom">
+                <tr>
+                  <th>অর্ডার আইডি</th>
+                  <th>তারিখ</th>
+                  <th>মোট</th>
+                  <th>অবস্থা</th>
+                  <th>বিস্তারিত</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Order Row 1 -->
+                <tr>
+                  <td class="fw-semibold">#BS-20351</td>
+                  <td>৯ নভেম্বর ২০২৫</td>
+                  <td>৳৪০৬</td>
+                  <td><span class="badge bg-success">ডেলিভারড</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-deep-purple fw-semibold" data-bs-toggle="modal" data-bs-target="#orderDetails1"><i class="bi bi-eye me-1"></i> দেখুন</button>
+                  </td>
+                </tr>
+
+                <!-- Order Row 2 -->
+                <tr>
+                  <td class="fw-semibold">#BS-20320</td>
+                  <td>৩ নভেম্বর ২০২৫</td>
+                  <td>৳৩২৫</td>
+                  <td><span class="badge bg-warning text-dark">প্রসেসিং</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-deep-purple fw-semibold"><i class="bi bi-eye me-1"></i> দেখুন</button>
+                  </td>
+                </tr>
+
+                <!-- Order Row 3 -->
+                <tr>
+                  <td class="fw-semibold">#BS-20298</td>
+                  <td>২৭ অক্টোবর ২০২৫</td>
+                  <td>৳২৮০</td>
+                  <td><span class="badge bg-secondary">বাতিল</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-deep-purple fw-semibold"><i class="bi bi-eye me-1"></i> দেখুন</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Order Details Modal ===== -->
+    <div class="modal fade" id="orderDetails1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0">
+          <div class="modal-header bg-deep-purple text-white">
+            <h6 class="modal-title"><i class="bi bi-receipt-cutoff me-2"></i> অর্ডার বিবরণ - #BS-20351</h6>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p class="small mb-2"><strong>তারিখ:</strong> ৯ নভেম্বর ২০২৫</p>
+            <p class="small mb-2"><strong>পেমেন্ট:</strong> ক্যাশ অন ডেলিভারি</p>
+            <p class="small mb-3"><strong>স্ট্যাটাস:</strong> <span class="badge bg-success">ডেলিভারড</span></p>
+
+            <div class="table-responsive">
+              <table class="table table-sm align-middle">
+                <thead class="text-muted small border-bottom">
+                  <tr>
+                    <th>বই</th>
+                    <th>পরিমাণ</th>
+                    <th>মূল্য</th>
+                    <th>মোট</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>তালেবের মাসায়েল</td>
+                    <td>1</td>
+                    <td>৳১১০</td>
+                    <td>৳১১০</td>
+                  </tr>
+                  <tr>
+                    <td>আহমদী বৈঠক</td>
+                    <td>2</td>
+                    <td>৳১২৩</td>
+                    <td>৳২৪৬</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="d-flex justify-content-between fw-bold border-top pt-2 mt-3">
+              <span>মোট পরিশোধ:</span>
+              <span class="text-deep-purple">৳৪০৬</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-deep-purple" data-bs-dismiss="modal"><i class="bi bi-x-lg me-1"></i> বন্ধ করুন</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Footer Section ===== -->
+    <footer class="footer-section text-white mt-5">
+      <div class="footer-top py-5">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Logo + About -->
+            <div class="col-md-4">
+              <h5 class="fw-bold mb-3">📚 BookStore</h5>
+              <p class="small mb-3">বাংলাদেশের অন্যতম অনলাইন বুকশপ — যেখানে ইসলামী, একাডেমিক ও সাহিত্য বই একসাথে পাওয়া যায়। আপনার প্রিয় বই এখন ঘরে বসেই!</p>
+              <div class="d-flex gap-2">
+                <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-6 col-md-2">
+              <h6 class="fw-bold mb-3">দ্রুত লিংক</h6>
+              <ul class="list-unstyled small">
+                <li><a href="#">হোম</a></li>
+                <li><a href="#">বই</a></li>
+                <li><a href="#">লেখক</a></li>
+                <li><a href="#">প্রকাশক</a></li>
+                <li><a href="#">যোগাযোগ</a></li>
+              </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="col-6 col-md-2">
+              <h6 class="fw-bold mb-3">বিষয়</h6>
+              <ul class="list-unstyled small">
+                <li><a href="#">ইসলামী</a></li>
+                <li><a href="#">একাডেমিক</a></li>
+                <li><a href="#">আরবি বই</a></li>
+                <li><a href="#">সাহিত্য</a></li>
+                <li><a href="#">শিশুতোষ</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-4">
+              <h6 class="fw-bold mb-3">যোগাযোগ</h6>
+              <ul class="list-unstyled small">
+                <li><i class="bi bi-telephone-fill me-2"></i> +880 1234 567890</li>
+                <li><i class="bi bi-envelope-fill me-2"></i> info@bookstore.com</li>
+                <li><i class="bi bi-geo-alt-fill me-2"></i> ঢাকা, বাংলাদেশ</li>
+              </ul>
+              <a href="#" class="btn btn-light text-deep-purple btn-sm mt-2 fw-semibold">আমাদের সাথে যোগাযোগ করুন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom text-center py-3">
+        <p class="small mb-0">© ২০২৫ BookStore. সর্বস্বত্ব সংরক্ষিত। তৈরি করেছেন 💜 <strong>HikmaTech</strong></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
