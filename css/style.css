@@ -458,3 +458,57 @@ body {
     display: block;
   }
 }
+
+/* ===== Bookstore Page ===== */
+.bookstore-page {
+  background-color: #f9fafc;
+}
+
+.book-card {
+  transition: 0.3s ease;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Sidebar filter */
+.bookstore-page .bg-white {
+  border: 1px solid #eee;
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+/* Theme */
+.text-deep-purple {
+  color: #42468a !important;
+}
+.bg-deep-purple {
+  background-color: #42468a !important;
+}
+
+.btn-deep-purple {
+  background-color: #42468a;
+  color: #fff;
+  border: none;
+}
+.btn-deep-purple:hover {
+  background-color: #333679;
+}
+
+.btn-outline-deep-purple {
+  border: 1px solid #42468a;
+  color: #42468a;
+}
+.btn-outline-deep-purple:hover {
+  background-color: #42468a;
+  color: #fff;
+}
